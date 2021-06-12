@@ -26,7 +26,8 @@
   },
   "homepage": "https://github.com/daren-malfait/eslint-config-daren#readme",
   "files": [
-    "dist"
+    "dist",
+    ".eslintrc.js"
   ],
   "scripts": {
     "build": "tsc --outDir dist",
