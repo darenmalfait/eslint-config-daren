@@ -20,6 +20,7 @@
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [With VS Code](#with-vs-code)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -42,6 +43,28 @@ module.exports = {
     // your overrides
   },
 };
+```
+
+## With VS Code
+
+Using the eslint-plugin you can use these settings for autoformatting:
+
+```js
+// These are all my auto-save configs
+"editor.formatOnSave": true,
+// turn it off for JS and JSX, we will do this via eslint
+"[javascript]": {
+  "editor.formatOnSave": false
+},
+"[javascriptreact]": {
+  "editor.formatOnSave": false
+},
+// show eslint icon at bottom toolbar
+"eslint.alwaysShowStatus": true,
+// tell the ESLint plugin to run on save
+"editor.codeActionsOnSave": {
+  "source.fixAll": true
+},
 ```
 
 <!-- prettier-ignore-start -->
