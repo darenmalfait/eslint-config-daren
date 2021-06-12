@@ -3,7 +3,7 @@
   "exclude": ["node_modules"],
   "include": ["./**/*"],
   "compilerOptions": {
-    "target": "es6",
+    "target": "es5",
     "strict": true,
     "noImplicitAny": false,
     "esModuleInterop": true,
