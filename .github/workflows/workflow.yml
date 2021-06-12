@@ -1,0 +1,72 @@
+name: CI
+on:
+  push:
+    branches:
+      - 'main'
+  pull_request: {}
+jobs:
+  main:
+    strategy:
+      matrix:
+        node: [12, 14, 15]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel ongoing builds
+        uses: styfle/cancel-workflow-action@0.9.0
+
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Download dependencies
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+        env:
+          HUSKY_SKIP_INSTALL: true
+
+      - name: Run validate script
+        run: npm run validate
+
+  release:
+    needs: main
+    runs-on: ubuntu-latest
+    if:
+      ${{ github.repository == 'daren-malfait/eslint-config-daren' && github.event_name == 'push' }}
+    steps:
+      - name: Cancel ongoing builds
+        uses: styfle/cancel-workflow-action@0.9.0
+
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Download dependencies
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+        env:
+          HUSKY_SKIP_INSTALL: true
+
+      - name: Run build script
+        run: npm run build
+
+      - name: 🚀
+        uses: cycjimmy/semantic-release-action@v2
+        with:
+          semantic_version: 17
+          branches: |
+            [
+              'main',
+            ]
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
