@@ -34,6 +34,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx . --fix",
+    "prepare": "husky install",
     "validate": "npm run build --silent && npm run lint --silent && npm run typecheck --silent"
   },
   "peerDependencies": {
