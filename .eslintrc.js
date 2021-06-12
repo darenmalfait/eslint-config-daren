@@ -138,7 +138,7 @@ module.exports = {
     'react/prefer-es6-class': 'off',
     'react/prefer-read-only-props': 'off',
     'react/prefer-stateless-function': 'off',
-    'react/prop-types': 'error',
+    'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'error',
     'react/require-default-props': 'off',
     'react/require-optimization': 'off',
