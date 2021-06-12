@@ -1,4 +1,4 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const eslintrc = require('../.eslintrc');
 
-export default eslintrc;
+module.exports = eslintrc;
