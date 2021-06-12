@@ -31,11 +31,10 @@
   ],
   "scripts": {
     "build": "tsc --outDir dist",
-    "typecheck": "tsc --noEmit",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx . --fix",
     "prepare": "husky install",
-    "validate": "npm run build --silent && npm run lint --silent && npm run typecheck --silent"
+    "validate": "npm run lint --silent"
   },
   "peerDependencies": {
     "babel-eslint": "^10.1.0",
