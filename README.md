@@ -45,26 +45,32 @@ module.exports = {
 };
 ```
 
-## With VS Code
+## VS Code
 
 Using the eslint-plugin you can use these settings for autoformatting:
 
 ```js
-// These are all my auto-save configs
 "editor.formatOnSave": true,
-// turn it off for JS and JSX, we will do this via eslint
-"[javascript]": {
-  "editor.formatOnSave": false
+"eslint.format.enable": true,
+  "[javascript]": {
+"editor.formatOnSave": false,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint"
 },
 "[javascriptreact]": {
-  "editor.formatOnSave": false
+  "editor.formatOnSave": false,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint"
 },
-// show eslint icon at bottom toolbar
-"eslint.alwaysShowStatus": true,
-// tell the ESLint plugin to run on save
+"[typescript]": {
+  "editor.formatOnSave": false,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+},
+"[typescriptreact]": {
+  "editor.formatOnSave": false,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+},
 "editor.codeActionsOnSave": {
-  "source.fixAll": true
-},
+  "source.fixAll": true,
+}
 ```
 
 <!-- prettier-ignore-start -->
