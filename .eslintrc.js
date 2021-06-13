@@ -54,7 +54,7 @@ module.exports = {
     'symbol-description': `error`,
     'constructor-super': `error`,
     'no-const-assign': `error`,
-    'no-console': 'error',
+    'no-console': ['error', { allow: ['warn', 'info', 'error'] }],
     'no-dupe-class-members': `error`,
     'no-new-symbol': `error`,
     'no-this-before-super': `error`,
