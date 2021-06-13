@@ -13,6 +13,7 @@
     "prettier"
   ],
   "author": "Daren Malfait <me@daren.be> (https://daren.be)",
+  "license": "MIT",
   "engines": {
     "node": ">=10",
     "npm": ">=6"
