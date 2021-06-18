@@ -6,7 +6,7 @@ module.exports = {
     `plugin:react/recommended`,
     `prettier`,
   ],
-  plugins: [`prettier`, `react`, 'react-hooks', `babel`, `jsx-a11y`],
+  plugins: [`prettier`, `react`, 'react-hooks', `babel`, `jsx-a11y`, `import`],
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: `module`,
@@ -73,6 +73,20 @@ module.exports = {
     'babel/valid-typeof': `error`,
     'require-jsdoc': `off`,
     'valid-jsdoc': `off`,
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+          'object',
+        ],
+      },
+    ],
     'react/boolean-prop-naming': 'off',
     'react/button-has-type': 'off',
     'react/default-props-match-prop-types': 'error',
