@@ -61,7 +61,7 @@ module.exports = {
     'no-unsafe-optional-chaining': `error`,
     'no-unused-expressions': `off`,
     'no-unused-vars': [
-      `warn`,
+      `error`,
       {
         varsIgnorePattern: `^_`,
         argsIgnorePattern: `^_`,
