@@ -256,6 +256,14 @@ module.exports = {
         '@typescript-eslint/no-dupe-class-members': `off`,
         'babel/no-unused-expressions': `off`,
         '@typescript-eslint/no-unused-expressions': `error`,
+        '@typescript-eslint/no-unused-vars': [
+          `error`,
+          {
+            varsIgnorePattern: `^_`,
+            argsIgnorePattern: `^_`,
+            ignoreRestSiblings: true,
+          },
+        ],
         '@typescript-eslint/explicit-module-boundary-types': [
           `warn`,
           {
