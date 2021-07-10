@@ -85,6 +85,8 @@ module.exports = {
           'index',
           'object',
         ],
+        'newlines-between': 'always-and-inside-groups',
+        alphabetize: { order: 'asc', caseInsensitive: true },
       },
     ],
     'react/boolean-prop-naming': 'off',
