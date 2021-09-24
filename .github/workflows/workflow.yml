@@ -2,7 +2,7 @@ name: CI
 on:
   push:
     branches:
-      - 'main'
+      - "main"
   pull_request: {}
 jobs:
   main:
@@ -35,8 +35,7 @@ jobs:
   release:
     needs: main
     runs-on: ubuntu-latest
-    if:
-      ${{ github.repository == 'daren-malfait/eslint-config-daren' && github.event_name == 'push' }}
+    if: ${{ github.repository == 'darenmalfait/eslint-config-daren' && github.event_name == 'push' }}
     steps:
       - name: Cancel ongoing builds
         uses: styfle/cancel-workflow-action@0.9.0

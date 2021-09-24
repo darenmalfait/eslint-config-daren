@@ -20,12 +20,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/daren-malfait/eslint-config-daren"
+    "url": "https://github.com/darenmalfait/eslint-config-daren"
   },
   "bugs": {
-    "url": "https://github.com/daren-malfait/eslint-config-daren/issues"
+    "url": "https://github.com/darenmalfait/eslint-config-daren/issues"
   },
-  "homepage": "https://github.com/daren-malfait/eslint-config-daren#readme",
+  "homepage": "https://github.com/darenmalfait/eslint-config-daren#readme",
   "files": [
     "dist",
     ".eslintrc.js"

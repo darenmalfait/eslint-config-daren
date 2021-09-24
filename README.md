@@ -18,9 +18,10 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+- [Table of Contents](#table-of-contents)
 - [Installation](#installation)
 - [Usage](#usage)
-- [With VS Code](#with-vs-code)
+- [VS Code](#vs-code)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -76,11 +77,11 @@ Using the eslint-plugin you can use these settings for autoformatting:
 <!-- prettier-ignore-start -->
 [npm]: https://www.npmjs.com
 [node]: https://nodejs.org
-[build-badge]: https://img.shields.io/github/workflow/status/daren-malfait/eslint-config-daren/CI?logo=github&style=flat-square
-[build]: https://github.com/daren-malfait/eslint-config-daren/actions?query=workflow
+[build-badge]: https://img.shields.io/github/workflow/status/darenmalfait/eslint-config-daren/CI?logo=github&style=flat-square
+[build]: https://github.com/darenmalfait/eslint-config-daren/actions?query=workflow
 [version-badge]: https://img.shields.io/npm/v/eslint-config-daren.svg?style=flat-square
 [package]: https://www.npmjs.com/package/eslint-config-daren
 [downloads-badge]: https://img.shields.io/npm/dm/eslint-config-daren.svg?style=flat-square
 [license-badge]: https://img.shields.io/npm/l/eslint-config-daren.svg?style=flat-square
-[license]: https://github.com/daren-malfait/eslint-config-daren/blob/main/LICENSE
+[license]: https://github.com/darenmalfait/eslint-config-daren/blob/main/LICENSE
 <!-- prettier-ignore-end -->
