@@ -21,6 +21,8 @@
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
 - [Usage](#usage)
+  - [Other configs](#other-configs)
+    - [React example](#react-example)
 - [VS Code](#vs-code)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -45,6 +47,31 @@ module.exports = {
   },
 };
 ```
+
+### Other configs
+
+You can use other configs in combination with the main eslint.
+
+```js
+module.exports = {
+  extends: ['daren', 'daren/<config-name>'],
+}
+```
+
+#### React example
+
+```js
+module.exports = {
+  extends: [
+    'daren/react',
+    'daren/jsx-a11y',
+  ],
+  rules: {
+    // your overrides
+  },
+};
+```
+
 
 ## VS Code
 

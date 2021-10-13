@@ -55,8 +55,8 @@ jobs:
         env:
           HUSKY_SKIP_INSTALL: true
 
-      - name: Run build script
-        run: npm run build
+      - name: Run validation script
+        run: npm run validate
 
       - name: 🚀
         uses: cycjimmy/semantic-release-action@v2
