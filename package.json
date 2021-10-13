@@ -25,12 +25,7 @@
     "url": "https://github.com/darenmalfait/eslint-config-daren/issues"
   },
   "homepage": "https://github.com/darenmalfait/eslint-config-daren#readme",
-  "files": [
-    "dist",
-    ".eslintrc.js"
-  ],
   "scripts": {
-    "build": "tsc --outDir dist",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx . --fix",
     "prepare": "husky install",
