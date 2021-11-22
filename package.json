@@ -2,7 +2,6 @@
   "name": "eslint-config-daren",
   "version": "0.0.0-semantically-released",
   "description": "eslint=config-daren",
-  "main": "index.js",
   "keywords": [
     "javascript",
     "ecmascript",
@@ -11,46 +10,28 @@
     "config",
     "prettier"
   ],
-  "author": "Daren Malfait <me@daren.be> (https://daren.be)",
-  "license": "MIT",
-  "engines": {
-    "node": ">=10",
-    "npm": ">=6"
+  "homepage": "https://github.com/darenmalfait/eslint-config-daren#readme",
+  "bugs": {
+    "url": "https://github.com/darenmalfait/eslint-config-daren/issues"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/darenmalfait/eslint-config-daren"
   },
-  "bugs": {
-    "url": "https://github.com/darenmalfait/eslint-config-daren/issues"
-  },
-  "homepage": "https://github.com/darenmalfait/eslint-config-daren#readme",
+  "license": "MIT",
+  "author": "Daren Malfait <me@daren.be> (https://daren.be)",
+  "main": "index.js",
   "scripts": {
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx . --fix",
     "prepare": "husky install",
     "validate": "npm run lint --silent"
   },
-  "peerDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/eslint-parser": "^7.16.3",
-    "@babel/eslint-plugin": "^7.14.5",
-    "@babel/preset-react": "^7.16.0",
-    "@typescript-eslint/eslint-plugin": "^5.4.0",
-    "@typescript-eslint/parser": "^5.4.0",
-    "eslint": "^8.3.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-import-resolver-alias": "^1.1.2",
-    "eslint-plugin-babel": "^5.3.1",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.27.1",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "prettier": "^2.4.1",
-    "typescript": "^4.5.2"
-  },
+  "eslintIgnore": [
+    "node_modules",
+    "coverage",
+    "dist"
+  ],
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@babel/eslint-parser": "^7.16.3",
@@ -77,5 +58,13 @@
     "@commitlint/config-conventional": "^15.0.0",
     "@types/node": "^16.11.9",
     "husky": "^7.0.4"
+  },
+  "peerDependencies": {
+    "eslint": "^8.3.0",
+    "typescript": "^4.5.2"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
   }
 }
