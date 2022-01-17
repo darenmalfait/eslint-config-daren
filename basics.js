@@ -82,7 +82,7 @@ module.exports = {
         proseWrap: 'always',
         quoteProps: 'as-needed',
         requirePragma: false,
-        semi: true,
+        semi: false,
         singleQuote: true,
         tabWidth: 2,
         trailingComma: 'all',
@@ -205,4 +205,4 @@ module.exports = {
       },
     },
   ],
-};
+}
