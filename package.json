@@ -25,7 +25,8 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx . --fix",
     "prepare": "husky install",
-    "validate": "npm run lint --silent"
+    "test": "yarn jest",
+    "validate": "npm run test && npm run lint --silent"
   },
   "eslintIgnore": [
     "node_modules",
@@ -40,6 +41,7 @@
     "@babel/runtime": "^7.16.7",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
+    "builtin-modules": "^3.2.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-alias": "^1.1.2",
@@ -56,9 +58,14 @@
   "devDependencies": {
     "@commitlint/cli": "^16.1.0",
     "@commitlint/config-conventional": "^16.0.0",
+    "@sucrase/jest-plugin": "^2.2.0",
+    "@types/eslint": "^8.4.1",
+    "@types/jest": "^27.4.1",
     "@types/node": "^17.0.12",
+    "common-tags": "^1.8.2",
     "eslint": "^8.7.0",
-    "husky": "^7.0.4"
+    "husky": "^7.0.4",
+    "jest": "^27.5.1"
   },
   "peerDependencies": {
     "eslint": "^8.7.0",
