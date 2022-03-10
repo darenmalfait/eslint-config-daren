@@ -1,9 +1,7 @@
-const nodeServerImports =
-  require('./rules/node-server-imports').nodeServerImports
-
 module.exports = {
   extends: ['./base-config.js'],
+  plugins: ['remix'],
   rules: {
-    'node-server-imports': nodeServerImports,
+    'node-server-imports': 'error',
   },
 }
