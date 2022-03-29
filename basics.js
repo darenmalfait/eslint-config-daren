@@ -125,61 +125,7 @@ module.exports = {
         ],
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/explicit-module-boundary-types': 'off',
-        '@typescript-eslint/naming-convention': [
-          `error`,
-          {
-            selector: `default`,
-            format: [`camelCase`],
-          },
-          {
-            selector: `variable`,
-            format: [`camelCase`, `UPPER_CASE`, `PascalCase`],
-            leadingUnderscore: `allowSingleOrDouble`,
-            trailingUnderscore: `allowSingleOrDouble`,
-          },
-          {
-            selector: `function`,
-            format: [`camelCase`, `PascalCase`],
-            leadingUnderscore: `allow`,
-          },
-          {
-            selector: `parameter`,
-            format: [`camelCase`, `PascalCase`, `snake_case`],
-            leadingUnderscore: `allowSingleOrDouble`,
-          },
-          {
-            selector: `enumMember`,
-            format: [`camelCase`, `UPPER_CASE`, `PascalCase`],
-          },
-          {
-            selector: `typeLike`,
-            format: [`PascalCase`],
-          },
-          {
-            selector: `typeAlias`,
-            format: [`camelCase`, `PascalCase`],
-          },
-          {
-            selector: `property`,
-            format: [`PascalCase`, `UPPER_CASE`, `camelCase`, `snake_case`],
-            leadingUnderscore: `allowSingleOrDouble`,
-          },
-          {
-            selector: `objectLiteralProperty`,
-            format: [`PascalCase`, `UPPER_CASE`, `camelCase`, `snake_case`],
-            leadingUnderscore: `allowSingleOrDouble`,
-            trailingUnderscore: `allowSingleOrDouble`,
-          },
-          {
-            selector: `enum`,
-            format: [`PascalCase`, `UPPER_CASE`],
-          },
-          {
-            selector: `method`,
-            format: [`PascalCase`, `camelCase`],
-            leadingUnderscore: `allowSingleOrDouble`,
-          },
-        ],
+        '@typescript-eslint/naming-convention': 'off',
         '@typescript-eslint/no-dupe-class-members': `off`,
         '@typescript-eslint/no-duplicate-imports': `error`,
         '@typescript-eslint/no-invalid-this': `error`,
