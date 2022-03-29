@@ -41,6 +41,7 @@ module.exports = {
     'no-new-symbol': `error`,
     'no-restricted-exports': `off`,
     'no-restricted-imports': `off`,
+    'no-return-await': 'error',
     'no-this-before-super': `error`,
     'no-unsafe-optional-chaining': `error`,
     'no-unused-expressions': `off`,
@@ -99,7 +100,15 @@ module.exports = {
   overrides: [
     {
       files: ['**/*.ts?(x)'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        ecmaVersion: 2020,
+        project: './tsconfig.json',
+        sourceType: 'module',
+      },
+      plugins: ['@typescript-eslint'],
       rules: {
+        '@typescript-eslint/adjacent-overload-signatures': 'error',
         '@typescript-eslint/ban-types': [
           `error`,
           {
@@ -174,6 +183,11 @@ module.exports = {
         '@typescript-eslint/no-dupe-class-members': `off`,
         '@typescript-eslint/no-duplicate-imports': `error`,
         '@typescript-eslint/no-invalid-this': `error`,
+        '@typescript-eslint/no-misused-promises': 'warn',
+        '@typescript-eslint/no-base-to-string': 'warn',
+        '@typescript-eslint/no-unnecessary-condition': 'error',
+        '@typescript-eslint/no-unnecessary-type-assertion': 'error',
+        '@typescript-eslint/no-unnecessary-type-constraint': 'error',
         '@typescript-eslint/no-unused-expressions': `error`,
         '@typescript-eslint/no-unused-vars': [
           `error`,
@@ -188,6 +202,7 @@ module.exports = {
         '@typescript-eslint/no-useless-constructor': `error`,
         'babel/no-invalid-this': `off`,
         'babel/no-unused-expressions': `off`,
+        '@typescript-eslint/switch-exhaustiveness-check': 'error',
         'babel/valid-typeof': `off`,
         'constructor-super': `off`,
         'no-const-assign': `off`,
