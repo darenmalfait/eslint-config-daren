@@ -1,4 +1,4 @@
 module.exports = {
-  extends: ['./base-config.js', './basics.js'],
+  extends: ['prettier', './base-config.js', './basics.js'],
   rules: {},
 }
