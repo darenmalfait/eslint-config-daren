@@ -66,7 +66,6 @@ module.exports = {
     'daren',
     'daren/react',
     'daren/jsx-a11y',
-    'daren/tailwind',
   ],
   rules: {
     // your overrides
