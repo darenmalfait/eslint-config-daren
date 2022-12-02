@@ -1,5 +1,25 @@
+const fs = require('fs')
+const path = require('path')
+
+/**
+ * @see https://github.com/eslint/eslint/issues/3458
+ * @see https://www.npmjs.com/package/@rushstack/eslint-patch
+ */
+require('@rushstack/eslint-patch/modern-module-resolution')
+
+const tsConfig = fs.existsSync('tsconfig.json')
+  ? path.resolve('tsconfig.json')
+  : fs.existsSync('types/tsconfig.json')
+  ? path.resolve('types/tsconfig.json')
+  : undefined
+
 module.exports = {
-  extends: ['./base-config.js', 'google', 'eslint:recommended', 'prettier'],
+  extends: ['./base-config.js', 'prettier'],
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+  },
   plugins: ['prettier', 'babel', 'import'],
   rules: {
     'arrow-body-style': `off`,
@@ -103,7 +123,7 @@ module.exports = {
       parser: '@typescript-eslint/parser',
       parserOptions: {
         ecmaVersion: 2020,
-        project: './tsconfig.json',
+        project: tsConfig,
         sourceType: 'module',
       },
       plugins: ['@typescript-eslint'],
@@ -129,7 +149,10 @@ module.exports = {
         '@typescript-eslint/no-dupe-class-members': `off`,
         '@typescript-eslint/no-duplicate-imports': `error`,
         '@typescript-eslint/no-invalid-this': `error`,
-        '@typescript-eslint/no-misused-promises': 'warn',
+        '@typescript-eslint/no-misused-promises': [
+          'warn',
+          { checksVoidReturn: false },
+        ],
         '@typescript-eslint/no-base-to-string': 'warn',
         '@typescript-eslint/no-unnecessary-condition': 'error',
         '@typescript-eslint/no-unnecessary-type-assertion': 'error',
