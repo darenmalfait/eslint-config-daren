@@ -14,7 +14,7 @@ const tsConfig = fs.existsSync('tsconfig.json')
   : undefined
 
 module.exports = {
-  extends: ['./base-config.js', 'prettier'],
+  extends: ['./base-config.js', './import.js', 'prettier'],
   env: {
     browser: true,
     es6: true,
@@ -35,22 +35,6 @@ module.exports = {
     'babel/no-unused-expressions': `error`,
     'babel/valid-typeof': `error`,
     'constructor-super': `error`,
-    'import/order': [
-      'error',
-      {
-        groups: [
-          'builtin',
-          'external',
-          'internal',
-          'sibling',
-          'parent',
-          'index',
-          'object',
-        ],
-        'newlines-between': 'always-and-inside-groups',
-        alphabetize: { order: 'asc', caseInsensitive: true },
-      },
-    ],
     'new-cap': `off`,
     'no-class-assign': `error`,
     'no-console': ['error', { allow: ['warn', 'info', 'error'] }],
