@@ -66,11 +66,12 @@ module.exports = {
           ['sibling', 'index'],
         ],
         'newlines-between': 'always-and-inside-groups',
-        alphabetize: { order: 'asc', caseInsensitive: true },
+        alphabetize: {order: 'asc', caseInsensitive: true},
       },
     ],
     'import/prefer-default-export': 'off',
     'import/unambiguous': 'off', // not sure I understand this rule well enough right now...
+    'sort-imports': `off`,
   },
   overrides: [
     {

@@ -1,19 +1,13 @@
 module.exports = {
-  parser: '@babel/eslint-parser',
   env: {
     browser: true,
     node: true,
     es6: true,
   },
   parserOptions: {
-    babelOptions: {
-      presets: ['@babel/preset-react'],
-    },
     ecmaVersion: 2018,
     sourceType: 'module',
-    requireConfigFile: false,
   },
-  plugins: ['@babel'],
   overrides: [
     {
       files: ['**/*.ts?(x)'],
@@ -23,7 +17,9 @@ module.exports = {
         sourceType: 'module',
       },
       plugins: ['@typescript-eslint'],
-      rules: {},
+      rules: {
+        'import/no-unresolved': 'off', // ts(2307)
+      },
     },
   ],
 }
