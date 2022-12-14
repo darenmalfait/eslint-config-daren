@@ -409,7 +409,7 @@ module.exports = {
         '@typescript-eslint/no-extraneous-class': 'error', // stay away from classes when you can
         '@typescript-eslint/no-floating-promises': 'warn', // not a bad rule, but can be annoying
         '@typescript-eslint/no-for-in-array': 'error',
-        '@typescript-eslint/no-implicit-any-catch': 'warn',
+        '@typescript-eslint/no-implicit-any-catch': 'off', // Not ready for this yet
         '@typescript-eslint/no-inferrable-types': 'off', // I personally prefer relying on inference where possible, but I don't want to lint for it.
         '@typescript-eslint/no-invalid-void-type': 'warn',
         '@typescript-eslint/no-misused-new': 'error',
@@ -430,11 +430,11 @@ module.exports = {
         '@typescript-eslint/no-unnecessary-type-arguments': 'off',
         '@typescript-eslint/no-unnecessary-type-assertion': 'error',
         '@typescript-eslint/no-unnecessary-type-constraint': 'error',
-        '@typescript-eslint/no-unsafe-argument': 'off',
-        '@typescript-eslint/no-unsafe-assignment': 'warn',
-        '@typescript-eslint/no-unsafe-call': 'warn',
-        '@typescript-eslint/no-unsafe-member-access': 'warn',
-        '@typescript-eslint/no-unsafe-return': 'off',
+        '@typescript-eslint/no-unsafe-argument': 'off', // Not ready for this yet
+        '@typescript-eslint/no-unsafe-assignment': 'off', // Not ready for this yet
+        '@typescript-eslint/no-unsafe-call': 'off', // Not ready for this yet
+        '@typescript-eslint/no-unsafe-member-access': 'off', // Not ready for this yet
+        '@typescript-eslint/no-unsafe-return': 'off', // Not ready for this yet
         '@typescript-eslint/no-var-requires': 'error',
         '@typescript-eslint/non-nullable-type-assertion-style': 'off',
         '@typescript-eslint/prefer-as-const': 'error',
