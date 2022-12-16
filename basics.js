@@ -132,7 +132,7 @@ module.exports = {
     'no-misleading-character-class': 'off',
     'no-multi-assign': 'error', // it's handy, but harder to read
     'no-multi-str': 'error',
-    'no-negated-condition': 'error',
+    'no-negated-condition': 'off', // I like negated conditions: if(!loggedIn) throw new Error('not logged in')
     'no-nested-ternary': 'off',
     'no-new': 'error',
     'no-new-func': 'error',
