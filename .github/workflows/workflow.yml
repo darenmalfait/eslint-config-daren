@@ -3,22 +3,23 @@ on:
   push:
     branches:
       - "main"
-  pull_request: {}
+  pull_request:
+    types: [opened, synchronize, reopened]
 jobs:
   main:
     strategy:
       matrix:
-        node: [14, 15]
+        node: [16]
     runs-on: ubuntu-latest
     steps:
-      - name: Cancel ongoing builds
-        uses: styfle/cancel-workflow-action@0.9.0
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
 
-      - name: Checkout repo
-        uses: actions/checkout@v2
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
 
-      - name: Setup node
-        uses: actions/setup-node@v2
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
 
@@ -29,24 +30,23 @@ jobs:
         env:
           HUSKY_SKIP_INSTALL: true
 
-      - name: Run validate script
-        run: npm run validate
+      - run: npm run validate
 
   release:
     needs: main
     runs-on: ubuntu-latest
     if: ${{ github.repository == 'darenmalfait/eslint-config-daren' && github.event_name == 'push' }}
     steps:
-      - name: Cancel ongoing builds
-        uses: styfle/cancel-workflow-action@0.9.0
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
 
-      - name: Checkout repo
-        uses: actions/checkout@v2
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
 
-      - name: Setup node
-        uses: actions/setup-node@v2
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: ${{ matrix.node }}
 
       - name: Download dependencies
         uses: bahmutov/npm-install@v1
@@ -55,8 +55,7 @@ jobs:
         env:
           HUSKY_SKIP_INSTALL: true
 
-      - name: Run validation script
-        run: npm run validate
+      - run: npm run validate
 
       - name: 🚀
         uses: cycjimmy/semantic-release-action@v2
