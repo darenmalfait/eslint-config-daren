@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "group:all",
+    "schedule:monthly",
+    ":maintainLockFilesMonthly",
+    ":automergePr",
+    ":automergeMinor"
+  ],
+  "rebaseWhen": "conflicted",
+  "labels": ["dependencies"],
+  "timezone": "Europe/Paris"
+}
