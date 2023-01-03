@@ -1,5 +1,5 @@
 {
-  "extends": ["config:base"],
+  "extends": ["config:base", ":semanticCommitTypeAll(fix)"],
   "ignorePresets": [":prHourlyLimit2"],
   "rangeStrategy": "bump",
   "automerge": true,
