@@ -32,7 +32,11 @@
 This module should be installed as one of your project's `devDependencies`:
 
 ```
-npx install-peerdeps --dev eslint-config-daren
+npm install --dev eslint-config-daren
+```
+
+```
+yarn add -D eslint-config-daren
 ```
 
 ## Usage
