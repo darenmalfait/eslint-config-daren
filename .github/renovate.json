@@ -5,7 +5,6 @@
     ":semanticPrefixFixDepsChoreOthers",
     "group:all",
     "schedule:monthly",
-    ":maintainLockFilesMonthly",
     ":automergePr",
     ":automergeMinor"
   ],
