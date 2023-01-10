@@ -1,24 +1,4 @@
 {
-  "extends": ["config:base"],
-  "ignorePresets": [":prHourlyLimit2"],
-  "rangeStrategy": "bump",
-  "automerge": true,
-  "major": {
-    "automerge": false
-  },
-  "lockFileMaintenance": {
-    "enabled": false
-  },
-  "schedule": ["before 7am every weekday", "every weekend"],
-  "semanticCommits": "enabled",
-  "rebaseWhen": "conflicted",
-  "labels": ["dependencies"],
-  "packageRules": [
-    {
-      "groupName": "all dependencies",
-      "groupSlug": "all",
-      "matchPackagePatterns": ["*"]
-    }
-  ],
-  "timezone": "Europe/Paris"
+  "extends": ["local>darenmalfait/daren-renovate-config:bundle-all"],
+  "packageRules": []
 }
