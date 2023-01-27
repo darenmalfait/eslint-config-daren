@@ -265,12 +265,12 @@ module.exports = {
         importOrder: [
           '', // empty line in case of built-in modules: importOrderBuiltinModulesToTop: true
           '^(react/(.*)$)|^(react$)',
-          '^(next/(.*)$)|^(next$)',
+          '^(next/(.*)$)|^(next$)|^(@next/(.*)$)',
           '<THIRD_PARTY_MODULES>', // third party modules
           '',
           '^types$', // types
           '',
-          '^[@~]', // local modules
+          '^(@/|~/)', // local modules (starting with @/ or ~/)
           '',
           '^[./]', // relative imports
           '', // empty line before side effects
