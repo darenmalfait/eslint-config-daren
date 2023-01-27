@@ -273,6 +273,7 @@ module.exports = {
           '^[@~]', // local modules
           '',
           '^[./]', // relative imports
+          '', // empty line before side effects
         ],
         importOrderSeparation: false,
         importOrderSortSpecifiers: true,
