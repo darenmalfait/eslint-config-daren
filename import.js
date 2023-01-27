@@ -58,19 +58,7 @@ module.exports = {
     'import/no-unused-modules': 'off',
     'import/no-useless-path-segments': 'off',
     'import/no-webpack-loader-syntax': 'error',
-    'import/order': [
-      'warn',
-      {
-        groups: [
-          'builtin',
-          ['external', 'internal'],
-          'parent',
-          ['sibling', 'index'],
-        ],
-        'newlines-between': 'always-and-inside-groups',
-        alphabetize: {order: 'asc', caseInsensitive: true},
-      },
-    ],
+    'import/order': 'off', // handled by prettier config
     'import/prefer-default-export': 'off',
     'import/unambiguous': 'off', // not sure I understand this rule well enough right now...
     'sort-imports': `off`,

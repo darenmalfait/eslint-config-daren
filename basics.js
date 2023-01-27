@@ -262,6 +262,23 @@ module.exports = {
         tabWidth: 2,
         trailingComma: 'all',
         useTabs: false,
+        importOrder: [
+          '', // empty line in case of built-in modules: importOrderBuiltinModulesToTop: true
+          '^(react/(.*)$)|^(react$)',
+          '^(next/(.*)$)|^(next$)',
+          '<THIRD_PARTY_MODULES>', // third party modules
+          '',
+          '^types$', // types
+          '',
+          '^[@~]', // local modules
+          '',
+          '^[./]', // relative imports
+        ],
+        importOrderSeparation: false,
+        importOrderSortSpecifiers: true,
+        importOrderBuiltinModulesToTop: true,
+        importOrderMergeDuplicateImports: true,
+        importOrderCombineTypeAndValueImports: true,
       },
     ],
   },
