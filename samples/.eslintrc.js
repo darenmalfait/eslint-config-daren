@@ -1,5 +1,11 @@
 module.exports = {
-  extends: ['../index.js', '../react.js', '../jsx-a11y.js', '../jest.js'],
+  extends: [
+    '../index.js',
+    '../react.js',
+    '../jsx-a11y.js',
+    '../jest.js',
+    '../tailwind.js',
+  ],
   overrides: [
     {
       files: ['**/*.ts?(x)'],

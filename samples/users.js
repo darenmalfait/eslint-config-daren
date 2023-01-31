@@ -11,7 +11,10 @@ function Users({nameFilter}) {
   return (
     <div className="user-list" id="users-section" data-testid="users">
       {users.map(user => (
-        <div key={user.id}>
+        <div
+          key={user.id}
+          className="border  border-green-100 bg-green-50 dark:border-green-200 dark:bg-green-500/10"
+        >
           {user.name} is friends with {user.friends.join(', ')}
         </div>
       ))}
