@@ -41,8 +41,8 @@
   "dependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^3.7.1",
     "@rushstack/eslint-patch": "^1.2.0",
-    "@typescript-eslint/eslint-plugin": "^5.49.0",
-    "@typescript-eslint/parser": "^5.49.0",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
     "builtin-modules": "^3.3.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-import-resolver-alias": "^1.1.2",
@@ -53,14 +53,14 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-tailwindcss": "^3.8.2",
+    "eslint-plugin-tailwindcss": "^3.8.3",
     "prettier": "^2.8.3",
     "read-pkg-up": "^7.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
-    "@types/eslint": "^8.4.10",
+    "@types/eslint": "^8.21.0",
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.27",
     "eslint": "^8.33.0",
