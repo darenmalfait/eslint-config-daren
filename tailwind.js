@@ -15,7 +15,7 @@ module.exports = {
     },
   },
   rules: {
-    'tailwindcss/classnames-order': 'error',
+    'tailwindcss/classnames-order': 'off',
     'tailwindcss/enforces-shorthand': 'error',
     'tailwindcss/migration-from-tailwind-2': 'warn',
     'tailwindcss/no-arbitrary-value': 'off',

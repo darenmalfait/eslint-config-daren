@@ -13,7 +13,7 @@ function Users({nameFilter}) {
       {users.map(user => (
         <div
           key={user.id}
-          className="border  border-green-100 bg-green-50 dark:border-green-200 dark:bg-green-500/10"
+          className="border border-green-100 bg-green-50 dark:border-green-200 dark:bg-green-500/10"
         >
           {user.name} is friends with {user.friends.join(', ')}
         </div>
