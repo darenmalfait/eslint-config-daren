@@ -1,6 +1,8 @@
 const fs = require('fs')
 const path = require('path')
 
+const pluginSortImports = require('@ianvs/prettier-plugin-sort-imports')
+
 /**
  * @see https://github.com/eslint/eslint/issues/3458
  * @see https://www.npmjs.com/package/@rushstack/eslint-patch
@@ -280,6 +282,7 @@ module.exports = {
         importOrderBuiltinModulesToTop: true,
         importOrderMergeDuplicateImports: true,
         importOrderCombineTypeAndValueImports: true,
+        plugins: [pluginSortImports],
       },
     ],
   },
