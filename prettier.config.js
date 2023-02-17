@@ -1,3 +1,3 @@
 module.exports = {
-  plugins: ['@ianvs/prettier-plugin-sort-imports'],
+  plugins: [require.resolve('@ianvs/prettier-plugin-sort-imports')],
 }
