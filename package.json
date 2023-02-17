@@ -26,6 +26,7 @@
     "find-new-rules:main": "eslint-find-rules --unused ./index.js",
     "find-new-rules:jest": "eslint-find-rules --unused ./test/jest/index.js",
     "find-new-rules:react": "eslint-find-rules --unused ./test/react/index.js",
+    "find-new-rules:tailwind": "eslint-find-rules --unused ./test/tailwind/index.js",
     "lint": "eslint --config index.js .",
     "prepare": "husky install",
     "validate": "npm-run-all --parallel lint find-new-rules"
@@ -55,7 +56,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-tailwindcss": "^3.8.3",
     "prettier": "^2.8.4",
-    "prettier-plugin-tailwindcss": "^0.2.2",
     "read-pkg-up": "^7.0.1"
   },
   "devDependencies": {
