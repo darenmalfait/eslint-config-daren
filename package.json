@@ -42,8 +42,8 @@
   "dependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^3.7.1",
     "@rushstack/eslint-patch": "^1.2.0",
-    "@typescript-eslint/eslint-plugin": "^5.53.0",
-    "@typescript-eslint/parser": "^5.53.0",
+    "@typescript-eslint/eslint-plugin": "^5.54.0",
+    "@typescript-eslint/parser": "^5.54.0",
     "builtin-modules": "^3.3.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-import-resolver-alias": "^1.1.2",
@@ -54,7 +54,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-tailwindcss": "^3.9.0",
+    "eslint-plugin-tailwindcss": "^3.10.1",
     "prettier": "^2.8.4",
     "read-pkg-up": "^7.0.1"
   },
