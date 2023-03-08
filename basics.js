@@ -16,7 +16,7 @@ const tsConfig = fs.existsSync('tsconfig.json')
   : undefined
 
 module.exports = {
-  extends: ['./base-config.js', './import.js', 'prettier'],
+  extends: ['./import.js'],
   env: {
     browser: true,
     es6: true,
