@@ -72,7 +72,6 @@ module.exports = {
         ecmaVersion: 2018,
         sourceType: 'module',
       },
-      plugins: ['@typescript-eslint'],
       rules: {
         'import/no-unresolved': 'off', // ts(2307)
       },
