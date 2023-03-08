@@ -1,5 +1,4 @@
 module.exports = {
-  extends: ['./base-config.js'],
   env: {
     browser: true,
   },

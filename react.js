@@ -5,7 +5,7 @@
 require('@rushstack/eslint-patch/modern-module-resolution')
 
 module.exports = {
-  extends: ['./base-config.js', 'plugin:react/recommended'],
+  extends: ['plugin:react/recommended'],
   env: {
     browser: true,
   },
