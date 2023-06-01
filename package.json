@@ -59,8 +59,8 @@
     "read-pkg-up": "^7.0.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.6.1",
-    "@commitlint/config-conventional": "^17.6.1",
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
     "@types/eslint": "^8.37.0",
     "@types/node": "^18.15.11",
     "@types/react": "^18.0.32",
