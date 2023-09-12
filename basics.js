@@ -1,8 +1,6 @@
 const fs = require('fs')
 const path = require('path')
 
-const pluginSortImports = require('@ianvs/prettier-plugin-sort-imports')
-
 /**
  * @see https://github.com/eslint/eslint/issues/3458
  * @see https://www.npmjs.com/package/@rushstack/eslint-patch
@@ -238,11 +236,12 @@ module.exports = {
     'sort-keys': 'off',
     'sort-vars': 'off',
     'spaced-comment': 'off',
-    strict: 'error',
     'symbol-description': 'error',
+    'unicode-bom': 'off',
     'use-isnan': 'error',
     'valid-typeof': 'error',
     'vars-on-top': 'error',
+    strict: 'error',
     yoda: 'error',
     'prettier/prettier': [
       'error',
@@ -282,7 +281,7 @@ module.exports = {
         importOrderBuiltinModulesToTop: true,
         importOrderMergeDuplicateImports: true,
         importOrderCombineTypeAndValueImports: true,
-        plugins: [pluginSortImports],
+        plugins: ['@ianvs/prettier-plugin-sort-imports'],
       },
     ],
   },
@@ -335,9 +334,6 @@ module.exports = {
 
         'no-dupe-class-members': 'off',
         '@typescript-eslint/no-dupe-class-members': 'off', // ts(2393) & ts(2300)
-
-        'no-duplicate-imports': 'off',
-        '@typescript-eslint/no-duplicate-imports': 'error',
 
         'no-empty-function': 'off',
         '@typescript-eslint/no-empty-function': 'off',
@@ -440,7 +436,6 @@ module.exports = {
         '@typescript-eslint/no-namespace': 'error',
         '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
         '@typescript-eslint/no-non-null-assertion': 'error',
-        '@typescript-eslint/no-parameter-properties': 'error', // yeah, I don't like this feature
         '@typescript-eslint/no-require-imports': 'off', // sometimes you can't do it any other way
         '@typescript-eslint/no-this-alias': 'error',
         '@typescript-eslint/no-type-alias': 'off',
