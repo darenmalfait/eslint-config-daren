@@ -81,5 +81,6 @@
     "typescript": {
       "optional": true
     }
-  }
+  },
+  "packageManager": "pnpm@8.10.2"
 }
