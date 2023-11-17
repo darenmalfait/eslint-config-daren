@@ -197,6 +197,7 @@ module.exports = {
     'no-useless-backreference': 'error',
     'no-useless-call': 'error',
     'no-useless-catch': 'error',
+    'no-object-constructor': 'off',
     'no-useless-computed-key': 'error',
     'no-useless-concat': 'error',
     'no-useless-constructor': 'error',
