@@ -42,6 +42,7 @@ module.exports = {
         'jest/max-nested-describe': 'error',
         'jest/no-alias-methods': 'off',
         'jest/no-commented-out-tests': 'warn',
+        'jest/no-confusing-set-timeout': 'error',
         'jest/no-conditional-expect': 'error',
         'jest/no-conditional-in-test': 'error',
         'jest/no-deprecated-functions': 'error',

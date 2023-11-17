@@ -10,8 +10,8 @@ require('@rushstack/eslint-patch/modern-module-resolution')
 const tsConfig = fs.existsSync('tsconfig.json')
   ? path.resolve('tsconfig.json')
   : fs.existsSync('types/tsconfig.json')
-  ? path.resolve('types/tsconfig.json')
-  : undefined
+    ? path.resolve('types/tsconfig.json')
+    : undefined
 
 module.exports = {
   extends: ['./import.js'],
