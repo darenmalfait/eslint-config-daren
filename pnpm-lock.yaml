@@ -59,10 +59,10 @@ dependencies:
 
 devDependencies:
   '@commitlint/cli':
-    specifier: ^17.7.1
+    specifier: ^17.8.1
     version: 17.8.1
   '@commitlint/config-conventional':
-    specifier: ^17.7.0
+    specifier: ^17.8.1
     version: 17.8.1
   '@types/eslint':
     specifier: ^8.44.2
