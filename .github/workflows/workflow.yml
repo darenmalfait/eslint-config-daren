@@ -24,24 +24,24 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - uses: pnpm/action-setup@d882d12c64e032187b2edb46d3a0d003b7a43598 # v2.4.0
-          name: Install pnpm
-          id: pnpm-install
-          with:
-            run_install: false
-  
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          run_install: false
+
       - name: Get pnpm store directory
         id: pnpm-cache
         run: |
-            echo "pnpm_cache_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
-  
+          echo "pnpm_cache_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
+
       - uses: actions/cache@704facf57e6136b1bc63b828d79edcd491f0ee84 # v3
-          name: Setup pnpm cache
-          with:
-            path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-            key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-            restore-keys: |
-              ${{ runner.os }}-pnpm-store-
-  
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
       - name: Install dependencies
         run: pnpm install --ignore-scripts
 
@@ -66,24 +66,24 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - uses: pnpm/action-setup@d882d12c64e032187b2edb46d3a0d003b7a43598 # v2.4.0
-          name: Install pnpm
-          id: pnpm-install
-          with:
-            run_install: false
-  
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          run_install: false
+
       - name: Get pnpm store directory
         id: pnpm-cache
         run: |
-            echo "pnpm_cache_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
-  
+          echo "pnpm_cache_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
+
       - uses: actions/cache@704facf57e6136b1bc63b828d79edcd491f0ee84 # v3
-          name: Setup pnpm cache
-          with:
-            path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-            key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-            restore-keys: |
-              ${{ runner.os }}-pnpm-store-
-  
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
       - name: Install dependencies
         run: pnpm install --ignore-scripts
 
