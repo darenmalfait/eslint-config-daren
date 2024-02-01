@@ -1,4 +1,4 @@
 module.exports = {
-  extends: ['prettier', './base-config.js', './basics.js'],
+  extends: ['eslint:recommended', './base-config.js', './basics.js'],
   rules: {},
 }
