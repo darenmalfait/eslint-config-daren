@@ -20,10 +20,11 @@
 
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
-- [Usage](#usage)
-  - [Other configs](#other-configs)
+- [Configuring ESLint, Prettier, and TypeScript Together](#configuring-eslint-prettier-and-typescript-together)
+  - [Prettier (Formatting)](#prettier-formatting)
+  - [Eslint (Linting)](#eslint-linting)
+    - [Other configs](#other-configs)
     - [React example](#react-example)
-- [VS Code](#vs-code)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -31,28 +32,55 @@
 
 This module should be installed as one of your project's `devDependencies`:
 
-```
+```bash
 npm install --dev eslint-config-daren
 ```
 
-```
+```bash
 yarn add -D eslint-config-daren
 ```
 
-## Usage
+```bash
+pnpm add -D eslint-config-daren
+```
+
+## Configuring ESLint, Prettier, and TypeScript Together
+
+### Prettier (Formatting)
+
+```json
+// .vscode/settings.json​
+{​
+  "editor.defaultFormatter": "esbenp.prettier-vscode",​
+  "editor.formatOnSave": true​
+}
+```
+
+```js
+// prettier.config.js
+
+import darenPrettierConfig from 'eslint-config-daren/prettier-config'
+
+export default {
+  ...darenPrettierConfig,
+  semi: false,
+}
+```
+
+### Eslint (Linting)
 
 Then add the extends to your .eslintrc.js:
 
 ```js
 module.exports = {
-  extends: "daren",
-  rules: {
+  extends: 'daren',
+  overrides: {
     // your overrides
   },
-};
+}
 ```
 
-### Other configs
+#### Other configs
 
 You can use other configs in combination with the main eslint.
 
@@ -62,48 +90,32 @@ module.exports = {
 }
 ```
 
-#### React example
+Or you can extend them like this:
 
 ```js
 module.exports = {
   extends: [
-    'daren',
-    'daren/react',
-    'daren/jsx-a11y',
-    'daren/tailwind',
+    ...[
+      'eslint-config-daren',
+      'eslint-config-daren/react',
+      'eslint-config-daren/jsx-a11y',
+      'eslint-config-daren/tailwind',
+    ].map(config => require.resolve(config)),
   ],
-  rules: {
+  overrides {
     // your overrides
   },
-};
+}
 ```
 
-
-## VS Code
-
-Using the eslint-plugin you can use these settings for autoformatting:
+#### React example
 
 ```js
-"editor.formatOnSave": true,
-"eslint.format.enable": true,
-  "[javascript]": {
-"editor.formatOnSave": false,
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-},
-"[javascriptreact]": {
-  "editor.formatOnSave": false,
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-},
-"[typescript]": {
-  "editor.formatOnSave": false,
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-},
-"[typescriptreact]": {
-  "editor.formatOnSave": false,
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-},
-"editor.codeActionsOnSave": {
-  "source.fixAll": true,
+module.exports = {
+  extends: ['daren', 'daren/react', 'daren/jsx-a11y', 'daren/tailwind'],
+  overrides: {
+    // your overrides
+  },
 }
 ```
 

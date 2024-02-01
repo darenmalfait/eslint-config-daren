@@ -20,7 +20,7 @@ module.exports = {
     es6: true,
     node: true,
   },
-  plugins: ['prettier', 'import'],
+  plugins: ['import'],
   rules: {
     'accessor-pairs': 'error',
     'array-callback-return': 'error',
@@ -244,47 +244,6 @@ module.exports = {
     'vars-on-top': 'error',
     strict: 'error',
     yoda: 'error',
-    'prettier/prettier': [
-      'error',
-      {
-        arrowParens: 'avoid',
-        bracketSpacing: false,
-        embeddedLanguageFormatting: 'auto',
-        endOfLine: 'lf',
-        htmlWhitespaceSensitivity: 'css',
-        insertPragma: false,
-        jsxBracketSameLine: false,
-        jsxSingleQuote: false,
-        printWidth: 80,
-        proseWrap: 'always',
-        quoteProps: 'as-needed',
-        requirePragma: false,
-        semi: false,
-        singleQuote: true,
-        tabWidth: 2,
-        trailingComma: 'all',
-        useTabs: false,
-        importOrder: [
-          '', // empty line in case of built-in modules: importOrderBuiltinModulesToTop: true
-          '^(react/(.*)$)|^(react$)',
-          '^(next/(.*)$)|^(next$)|^(@next/(.*)$)',
-          '<THIRD_PARTY_MODULES>', // third party modules
-          '',
-          '^types$', // types
-          '',
-          '^(@/|~/)', // local modules (starting with @/ or ~/)
-          '',
-          '^[./]', // relative imports
-          '', // empty line before side effects
-        ],
-        importOrderSeparation: false,
-        importOrderSortSpecifiers: true,
-        importOrderBuiltinModulesToTop: true,
-        importOrderMergeDuplicateImports: true,
-        importOrderCombineTypeAndValueImports: true,
-        plugins: ['@ianvs/prettier-plugin-sort-imports'],
-      },
-    ],
   },
   overrides: [
     {

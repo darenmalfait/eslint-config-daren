@@ -10,6 +10,7 @@ module.exports = {
   },
   overrides: [
     {
+      extends: ['plugin:@typescript-eslint/recommended-type-checked'],
       files: ['**/*.ts?(x)'],
       parser: '@typescript-eslint/parser',
       parserOptions: {

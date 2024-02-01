@@ -22,6 +22,8 @@
   "author": "Daren Malfait <me@daren.be> (https://daren.be)",
   "main": "index.js",
   "scripts": {
+    "format": "prettier . --check --cache --cache-location=\"node_modules/.cache/prettiercache\"",
+    "format:fix": "prettier . --write --cache --cache-location=\"node_modules/.cache/prettiercache\" --log-level=warn",
     "find-new-rules": "npm-run-all --parallel find-new-rules:*",
     "find-new-rules:main": "eslint-find-rules --unused ./index.js",
     "find-new-rules:jest": "eslint-find-rules --unused ./test/jest/index.js",
@@ -29,23 +31,22 @@
     "find-new-rules:tailwind": "eslint-find-rules --unused ./test/tailwind/index.js",
     "lint": "eslint --config index.js .",
     "prepare": "husky install",
-    "validate": "npm-run-all --parallel lint find-new-rules"
+    "validate": "npm-run-all --parallel format lint find-new-rules"
+  },
+  "eslintConfig": {
+    "extends": "./index.js"
   },
   "eslintIgnore": [
     "node_modules",
     "coverage",
     "dist"
   ],
-  "eslintConfig": {
-    "extends": "./index.js"
-  },
   "dependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
     "@rushstack/eslint-patch": "^1.6.1",
     "@typescript-eslint/eslint-plugin": "^6.18.0",
     "@typescript-eslint/parser": "^6.18.0",
     "builtin-modules": "^3.3.0",
-    "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jest": "^27.6.0",
@@ -56,6 +57,8 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-tailwindcss": "^3.13.1",
     "prettier": "^3.1.1",
+    "prettier-plugin-curly": "^0.1.3",
+    "prettier-plugin-packagejson": "^2.4.7",
     "read-pkg-up": "^7.0.1"
   },
   "devDependencies": {
