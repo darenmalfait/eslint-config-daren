@@ -51,20 +51,23 @@ pnpm add -D eslint-config-daren
 ```json
 // .vscode/settings.json​
 {​
-  "editor.defaultFormatter": "esbenp.prettier-vscode",​
+  "editor.codeActionsOnSave": {"source.fixAll.eslint": "explicit"},
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true​
+}
+```
+
+```json
+// .vscode/extensions.json​
+{
+  "recommendations": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint"]
 }
 ```
 
 ```js
 // prettier.config.js
-
-import darenPrettierConfig from 'eslint-config-daren/prettier-config'
-
-export default {
-  ...darenPrettierConfig,
-  semi: false,
-}
+/** @type {import("prettier").Config} */
+module.exports = require('eslint-config-daren/prettier.config.cjs')
 ```
 
 ### Eslint (Linting)
