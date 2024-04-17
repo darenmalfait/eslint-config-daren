@@ -21,5 +21,6 @@ module.exports = {
     'tailwindcss/no-arbitrary-value': 'off',
     'tailwindcss/no-contradicting-classname': 'error',
     'tailwindcss/no-custom-classname': 'off',
+    'tailwindcss/no-unnecessary-arbitrary-value': 'off',
   },
 }
