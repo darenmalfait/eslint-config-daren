@@ -36,7 +36,12 @@ module.exports = {
     'import/no-cycle': 'off', // this rule is quite slow...
     'import/no-default-export': 'off',
     'import/no-deprecated': 'warn', // this is an in progress rule
-    'import/no-duplicates': 'error',
+    'import/no-duplicates': [
+      'error',
+      {
+        'prefer-inline': true,
+      },
+    ],
     'import/no-dynamic-require': 'off',
     'import/no-empty-named-blocks': 'error',
     'import/no-extraneous-dependencies': 'error',

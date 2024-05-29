@@ -368,7 +368,10 @@ module.exports = {
         '@typescript-eslint/consistent-indexed-object-style': 'off',
         '@typescript-eslint/consistent-type-assertions': 'off',
         '@typescript-eslint/consistent-type-definitions': 'off',
-        '@typescript-eslint/consistent-type-imports': 'off', // I think I prefer typed imports, but you can't always use them
+        '@typescript-eslint/consistent-type-imports': [
+          'error',
+          {prefer: 'type-imports', fixStyle: 'inline-type-imports'},
+        ],
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/member-delimiter-style': 'off',
