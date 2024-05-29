@@ -30,7 +30,7 @@
     "find-new-rules:react": "eslint-find-rules --unused ./test/react/index.js",
     "find-new-rules:tailwind": "eslint-find-rules --unused ./test/tailwind/index.js",
     "lint": "eslint --config index.js .",
-    "prepare": "husky install",
+    "prepare": "husky",
     "validate": "npm-run-all --parallel format lint find-new-rules"
   },
   "eslintConfig": {
