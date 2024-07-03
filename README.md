@@ -1,3 +1,6 @@
+> ⚠️ **Not maintained**: The package is longer maintained, please use
+> [@nerdfish/config](https://github.com/darenmalfait/nerdfish-config) instead.
+
 <div align="center">
 <h1>eslint-config-daren</h1>
 
